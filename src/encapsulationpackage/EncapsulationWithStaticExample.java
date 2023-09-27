@@ -13,10 +13,14 @@ public class EncapsulationWithStaticExample {
     public String getName() {
         return name;
     }
+    public static void setstaticCounter(int   value) {
+    	staticCounter=value;
+    }
 
     public static int getStaticCounter() {
         return staticCounter;
     }
+    
 
     public static void main(String[] args) {
         EncapsulationWithStaticExample obj1 = new EncapsulationWithStaticExample("praveen kumar reddy");
@@ -24,7 +28,8 @@ public class EncapsulationWithStaticExample {
 
         System.out.println("Name of obj1: " + obj1.getName());
         System.out.println("Name of obj2: " + obj2.getName());
-
+        
+        EncapsulationWithStaticExample.setstaticCounter(25);
         System.out.println("Static counter: " + EncapsulationWithStaticExample.getStaticCounter());
     }
 }
